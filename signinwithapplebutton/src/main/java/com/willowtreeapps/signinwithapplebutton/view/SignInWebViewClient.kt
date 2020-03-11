@@ -49,7 +49,7 @@ internal class SignInWebViewClient(
                         callback(SignInWithAppleResult.Failure(IllegalArgumentException("state does not match")))
                     }
                     else -> {
-                        callback(SignInWithAppleResult.Success(codeParameter))
+                        callback(SignInWithAppleResult.Success(codeParameter, stateParameter))
                     }
                 }
 

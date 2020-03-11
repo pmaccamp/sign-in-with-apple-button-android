@@ -31,7 +31,7 @@ class FormInterceptorInterface(
 
         callback?.invoke(
             if (stateValue == expectedState)
-                SignInWithAppleResult.Success(codeValue)
+                SignInWithAppleResult.Success(codeValue, stateValue)
             else
                 SignInWithAppleResult.Failure(IOException("The response's state does not match the expected state."))
         )
