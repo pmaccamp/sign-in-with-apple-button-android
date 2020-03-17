@@ -92,6 +92,7 @@ internal class SignInWebViewDialogFragment : DialogFragment() {
 
     override fun onStart() {
         super.onStart()
+        Log.i(dialog)
 
         dialog?.window?.setLayout(MATCH_PARENT, MATCH_PARENT)
     }
@@ -104,6 +105,8 @@ internal class SignInWebViewDialogFragment : DialogFragment() {
     // SignInWithAppleCallback
 
     private fun onCallback(result: SignInWithAppleResult) {
+        Log.i("callback")
+        Log.i(dialog)
         dialog?.dismiss()
         val callback = callback
         if (callback == null) {
